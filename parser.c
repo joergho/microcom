@@ -146,7 +146,7 @@ static int __do_commandline(const char *prompt)
 				continue;
 
 			for_each_command(command) {
-				if (!strcmp(argv[0], command->name)) {
+				if (!strcmp(argv[0], command->name) || ((command->alias != NULL) && !strcmp(argv[0], command->alias))) {
 					ret = command->fn(argc, argv);
 					if (ret == MICROCOM_CMD_START) {
 						free(cmd);

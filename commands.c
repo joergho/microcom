@@ -207,16 +207,19 @@ static struct cmd cmds[] = {
 		.name = "speed",
 		.fn = cmd_speed,
 		.info = "set terminal speed",
-		.help = "speed <newspeed>"
+		.help = "speed <newspeed>",
+		.alias = "s",
 	}, {
 		.name = "exit",
 		.fn = cmd_exit,
 		.info = "exit from command processing",
+		.alias = "e",
 	}, {
 		.name = "flow",
 		.fn = cmd_flow,
 		.info = "set flow control",
 		.help = "flow hard|soft|none",
+		.alias = "f"
 	}, {
 		.name = "dtr",
 		.fn = cmd_set_handshake_line,
@@ -231,18 +234,22 @@ static struct cmd cmds[] = {
 		.name = "break",
 		.fn = cmd_break,
 		.info = "send break",
+		.alias = "b",
 	}, {
 		.name = "sendescape",
 		.fn = cmd_sendescape,
 		.info = "send a Ctrl-\\",
+		.alias = "s",
 	}, {
 		.name = "quit",
 		.fn = cmd_quit,
 		.info = "quit microcom",
+		.alias = "q",
 	}, {
 		.name = "help",
 		.fn = cmd_help,
 		.info = "show help",
+		.alias = "h",
 	}, {
 		.name = "x",
 		.fn = cmd_execute,
@@ -253,10 +260,12 @@ static struct cmd cmds[] = {
 		.fn = cmd_log,
 		.info = "log to file",
 		.help = "log <logfile>",
+		.alias = "l",
 	}, {
 		.name = "#",
 		.fn = cmd_comment,
 		.info = "comment",
+		.alias = "c",
 	},
 };
 

@@ -80,6 +80,7 @@ struct cmd {
 	struct cmd *next;
 	char *info;
 	char *help;
+	char *alias;
 };
 
 int logfile_open(const char *path);
